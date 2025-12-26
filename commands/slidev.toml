@@ -1,0 +1,65 @@
+[command]
+name = "slidev"
+description = "Manage Slidev presentations"
+
+[[subcommand]]
+name = "init"
+description = "Initialize a new Slidev project"
+text = """
+Please initialize a new Slidev project in the current directory.
+1. Check if the directory is empty or suitable.
+2. Run 'npm init slidev@latest' using the shell command.
+3. Explain the process to the user.
+"""
+
+[[subcommand]]
+name = "generate"
+description = "Generate slides content from a topic"
+text = """
+I want to generate a set of slides based on a topic or outline.
+1. Ask me for the topic, target audience, and desired number of slides if I haven't provided them.
+2. Plan the content.
+3. Create or overwrite 'slides.md' with the generated content using Slidev syntax.
+"""
+
+[[subcommand]]
+name = "add"
+description = "Add a new slide"
+text = """
+I want to append a new slide to the existing presentation.
+1. Ask for the layout (e.g., default, two-cols, image-right) and content.
+2. Append the new slide to 'slides.md' using the '---' separator.
+"""
+
+[[subcommand]]
+name = "edit"
+description = "Edit existing slides"
+text = """
+I want to modify the existing slides.
+1. Read 'slides.md' to understand the current content.
+2. Ask me specifically what changes to make (e.g., change layout, update text, add animations).
+3. Apply the changes.
+"""
+
+[[subcommand]]
+name = "export"
+description = "Export presentation to PDF/PNG"
+text = """
+I want to export my presentation.
+1. Ask if I want PDF or PNG format.
+2. Run the appropriate Slidev export command (e.g., 'npx slidev export --format pdf').
+"""
+
+[[subcommand]]
+name = "run"
+description = "Start Slidev development server"
+text = """
+Start the Slidev development server.
+1. Run 'npm run dev' or 'npx slidev' in the background.
+2. Inform me of the URL (usually http://localhost:3030).
+"""
+
+[[subcommand]]
+name = "help"
+description = "Show help for the Slidev extension"
+text = "Please display the help information for this Slidev extension, listing all available subcommands (init, generate, add, edit, export, run) and their usage."

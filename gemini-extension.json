@@ -1,0 +1,10 @@
+{
+  "identifier": "slidev-assistant",
+  "name": "slidev-assistant",
+  "description": "Create and manage Slidev presentations directly from Gemini CLI.",
+  "version": "0.2.0",
+  "entryPoint": "GEMINI.md",
+  "commands": [
+    "commands/slidev.toml"
+  ]
+}
