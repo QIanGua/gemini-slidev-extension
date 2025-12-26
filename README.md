@@ -24,7 +24,7 @@ A professional Gemini CLI extension for creating, editing, and managing [Slidev]
 Install the extension using the `gemini extensions install` command:
 
 ```bash
-gemini extensions install https://github.com/gemini-cli-extensions/slidev
+gemini extensions install https://github.com/QIanGua/gemini-slidev-extension
 ```
 
 ### 2. Activate
