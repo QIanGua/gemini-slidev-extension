@@ -1,0 +1,8 @@
+description = "Start Slidev development server"
+prompt = """
+Start the Slidev development server.
+1. Run 'npm run dev' or 'npx slidev --open' in the background.
+2. The '--open' flag will automatically open the browser.
+3. Inform me of the URL (usually http://localhost:3030) and the presenter mode URL (http://localhost:3030/presenter).
+"""
+

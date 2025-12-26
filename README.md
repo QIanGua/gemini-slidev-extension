@@ -1,33 +1,126 @@
-# Slidev Gemini Extension
+# Slidev - Gemini CLI Extension
 
-A Gemini CLI extension to help you create and edit [Slidev](https://sli.dev/) presentations effortlessly.
+A professional Gemini CLI extension for creating, editing, and managing [Slidev](https://sli.dev/) presentations—Markdown-based slides for developers.
 
-## Features
+## ✨ Features
 
-- ⚡ **Init**: Quickly scaffold a new Slidev project with theme selection.
-- 📝 **Generate**: Create full slide decks with advanced layouts, animations (`<v-click>`), and speaker notes.
-- ➕ **Add**: Append new slides using built-in layouts (`two-cols`, `image-right`, `quote`, etc.).
-- 🎨 **Edit**: Modify slides with UnoCSS styling, change themes, or refine animations.
-- 📤 **Export**: Export your presentation to PDF/PNG, with support for click steps.
-- ▶️ **Run**: Start the development server with auto-open and presenter mode info.
+- **⚡ Instant Setup**: Initialize new Slidev projects with best practices and theme selection.
+- **📝 Intelligent Generation**: Create full slide decks with optimal layouts (`two-cols`, `image-right`), animations (`<v-click>`), and speaker notes.
+- **🎨 Smart Editing**: Modify slides using UnoCSS utility classes and refined component usage.
+- **➕ Seamless Addition**: Insert new slides intelligently into existing decks.
+- **📤 Production Export**: Export to PDF/PNG with support for animation steps (`--with-clicks`).
+- **▶️ Dev Server**: Integrated control for starting the local preview server.
 
-## Usage
+## 📋 Prerequisites
 
-Use the `/slidev` command to interact with the extension.
+1. **Gemini CLI** installed and configured
+2. **Node.js 18+** and npm/pnpm/yarn
+3. **Slidev** (will be installed automatically in new projects)
 
-- `/slidev init`: Initialize a new Slidev project in the current directory.
-- `/slidev generate`: Generate content for your slides based on a topic.
-- `/slidev add`: Add a new slide to the end of the presentation.
-- `/slidev edit`: Edit specific slides or global configurations.
-- `/slidev export`: Export the presentation to PDF or PNG.
-- `/slidev run`: Start the local development server.
-- `/slidev help`: Show help information.
+## 🚀 Installation
 
-## Installation
+### 1. Install Extension
 
-Clone this repository into your Gemini extensions directory:
+Install the extension using the `gemini extensions install` command:
 
 ```bash
-cd ~/.gemini/extensions
-git clone <your-repo-url> slidev
+gemini extensions install https://github.com/gemini-cli-extensions/slidev
 ```
+
+### 2. Activate
+
+Restart the Gemini CLI. The following commands will be available:
+
+- `/init` - Initialize a new Slidev project
+- `/generate` - Generate complete slide decks from topics
+- `/add` - Add new slides with specific layouts
+- `/edit` - Refine content and styles
+- `/export` - Export presentation to PDF/PNG
+- `/run` - Start the local development server
+- `/slidev` - Main entry point and help
+
+## 💡 Usage
+
+The extension provides a suite of commands for the entire presentation lifecycle:
+
+### 🎯 Specific Commands (Recommended)
+
+**Initialize Project:**
+
+```bash
+/init
+# "Initialize a new project with the 'seriph' theme"
+```
+
+**Generate Content:**
+
+```bash
+/generate "Deep Learning Fundamentals"
+# Generates a structured deck with cover, intro, key concepts, and summary
+```
+
+**Add Slides:**
+
+```bash
+/add "Comparison of React vs Vue"
+# Adds a 'two-cols' layout slide comparing the frameworks
+```
+
+**Edit & Refine:**
+
+```bash
+/edit "Make the title on slide 3 bigger and red"
+# Applies 'text-4xl text-red-500' classes using UnoCSS
+```
+
+**Export:**
+
+```bash
+/export --format pdf --with-clicks
+# Exports a PDF including all animation steps
+```
+
+**Run Server:**
+
+```bash
+/run
+# Starts the dev server at http://localhost:3030
+```
+
+### 🌟 Natural Language Command (Flexible)
+
+**Open-ended prompts:**
+
+```bash
+/slidev I need a presentation about Rust programming language for beginners
+/slidev Add a slide with a code block showing a Hello World example in Python
+/slidev Export the current deck to PNG
+```
+
+## 🔧 Technical Details
+
+### Core Principles
+
+This extension adheres to strict quality standards defined in `GEMINI.md`:
+
+- **Markdown-Centric**: Treats `slides.md` as the source of truth.
+- **Component-Driven**: leverages Slidev's built-in layouts and Vue components.
+- **Progressive Disclosure**: Smart use of animations to control information flow.
+
+### Configuration
+
+The extension automatically handles:
+
+- YAML Frontmatter validation
+- Component syntax checking
+- Asset path resolution
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+## 📄 Legal
+
+- **License**: [Apache License 2.0](LICENSE)

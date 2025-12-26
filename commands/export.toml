@@ -1,0 +1,8 @@
+description = "Export presentation to PDF/PNG"
+prompt = """
+I want to export my presentation.
+1. Ask if I want PDF, PNG, or PPTX format.
+2. Ask if I want to include click animations ('--with-clicks').
+3. Run the appropriate Slidev export command (e.g., 'npx slidev export --format pdf --with-clicks').
+"""
+

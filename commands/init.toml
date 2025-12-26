@@ -1,0 +1,9 @@
+description = "Initialize a new Slidev project"
+prompt = """
+Please initialize a new Slidev project in the current directory.
+1. Check if the directory is empty or suitable.
+2. Run 'npm init slidev@latest' using the shell command.
+3. Suggest the user to choose a theme (e.g., 'seriph', 'default', 'apple-basic').
+4. Explain the created file structure (slides.md, components/, etc.).
+"""
+

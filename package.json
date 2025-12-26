@@ -1,0 +1,19 @@
+{
+  "name": "slidev-extension",
+  "version": "0.4.0",
+  "type": "module",
+  "description": "Gemini CLI extension for Slidev - Create and manage developer presentations",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --fix"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "prettier": "^3.5.3"
+  }
+}
+

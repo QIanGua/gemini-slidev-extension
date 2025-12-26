@@ -1,0 +1,12 @@
+description = "Edit existing slides"
+prompt = """
+I want to modify the existing slides.
+1. Read 'slides.md' to understand the current content.
+2. Ask specifically what changes to make.
+   - Can modify global Frontmatter (theme, highlighter).
+   - Can apply UnoCSS classes for styling (e.g., 'text-blue-500', 'flex', 'grid').
+   - Can add animations (<v-click>, v-motion).
+   - Can refactor long slides into multiple slides.
+3. Apply the changes precisely.
+"""
+

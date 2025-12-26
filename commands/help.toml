@@ -1,0 +1,3 @@
+description = "Show help for the Slidev extension"
+prompt = "Please display the help information for this Slidev extension, listing all available subcommands (init, generate, add, edit, export, run) and their usage."
+

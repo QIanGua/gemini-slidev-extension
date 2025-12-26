@@ -1,7 +1,7 @@
 [[command]]
 name = "slidev"
 description = "Manage Slidev presentations"
-
+prompt = "You are a Slidev assistant. Please use the available subcommands (init, generate, add, edit, export, run) to help the user manage their presentation."
 [[command.subcommands]]
 name = "init"
 description = "Initialize a new Slidev project"
@@ -25,7 +25,7 @@ I want to generate a set of slides based on a topic or outline.
    - Use various layouts: 'cover', 'intro', 'center', 'two-cols', 'image-right', 'quote'.
    - Use <v-click> or <v-clicks> for progressive list reveals.
    - Add speaker notes using HTML comments <!-- ... -->.
-   - Use code blocks with line highlighting if relevant (e.g., ```ts {1|2-3}).
+   - Use code blocks with line highlighting if relevant.
 """
 
 [[command.subcommands]]
@@ -36,7 +36,7 @@ I want to append a new slide to the existing presentation.
 1. Ask for the layout (choose from 'default', 'center', 'two-cols', 'image-left', 'image-right', 'quote', 'statement') and content.
 2. Append the new slide to 'slides.md' using the '---' separator.
    - For 'two-cols' layout, remind me to use '::right::' to separate columns.
-   - Encourage using icons (via Iconify, e.g., <carbon:logo-github />) or UnoCSS classes.
+   - Encourage using icons (via Iconify) or UnoCSS classes.
 """
 
 [[command.subcommands]]
@@ -77,3 +77,5 @@ Start the Slidev development server.
 name = "help"
 description = "Show help for the Slidev extension"
 prompt = "Please display the help information for this Slidev extension, listing all available subcommands (init, generate, add, edit, export, run) and their usage."
+
+

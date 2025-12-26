@@ -1,0 +1,9 @@
+description = "Add a new slide"
+prompt = """
+I want to append a new slide to the existing presentation.
+1. Ask for the layout (choose from 'default', 'center', 'two-cols', 'image-left', 'image-right', 'quote', 'statement') and content.
+2. Append the new slide to 'slides.md' using the '---' separator.
+   - For 'two-cols' layout, remind me to use '::right::' to separate columns.
+   - Encourage using icons (via Iconify, e.g., <carbon:logo-github />) or UnoCSS classes.
+"""
+
