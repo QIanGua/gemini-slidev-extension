@@ -1,65 +1,79 @@
-[command]
+[[command]]
 name = "slidev"
 description = "Manage Slidev presentations"
 
-[[subcommand]]
+[[command.subcommands]]
 name = "init"
 description = "Initialize a new Slidev project"
-text = """
+prompt = """
 Please initialize a new Slidev project in the current directory.
 1. Check if the directory is empty or suitable.
 2. Run 'npm init slidev@latest' using the shell command.
-3. Explain the process to the user.
+3. Suggest the user to choose a theme (e.g., 'seriph', 'default', 'apple-basic').
+4. Explain the created file structure (slides.md, components/, etc.).
 """
 
-[[subcommand]]
+[[command.subcommands]]
 name = "generate"
 description = "Generate slides content from a topic"
-text = """
+prompt = """
 I want to generate a set of slides based on a topic or outline.
 1. Ask me for the topic, target audience, and desired number of slides if I haven't provided them.
-2. Plan the content.
+2. Plan the content with a logical flow (Intro -> Key Points -> Conclusion).
 3. Create or overwrite 'slides.md' with the generated content using Slidev syntax.
+   - ENSURE you start with a Frontmatter block defining 'theme', 'background', 'title', etc.
+   - Use various layouts: 'cover', 'intro', 'center', 'two-cols', 'image-right', 'quote'.
+   - Use <v-click> or <v-clicks> for progressive list reveals.
+   - Add speaker notes using HTML comments <!-- ... -->.
+   - Use code blocks with line highlighting if relevant (e.g., ```ts {1|2-3}).
 """
 
-[[subcommand]]
+[[command.subcommands]]
 name = "add"
 description = "Add a new slide"
-text = """
+prompt = """
 I want to append a new slide to the existing presentation.
-1. Ask for the layout (e.g., default, two-cols, image-right) and content.
+1. Ask for the layout (choose from 'default', 'center', 'two-cols', 'image-left', 'image-right', 'quote', 'statement') and content.
 2. Append the new slide to 'slides.md' using the '---' separator.
+   - For 'two-cols' layout, remind me to use '::right::' to separate columns.
+   - Encourage using icons (via Iconify, e.g., <carbon:logo-github />) or UnoCSS classes.
 """
 
-[[subcommand]]
+[[command.subcommands]]
 name = "edit"
 description = "Edit existing slides"
-text = """
+prompt = """
 I want to modify the existing slides.
 1. Read 'slides.md' to understand the current content.
-2. Ask me specifically what changes to make (e.g., change layout, update text, add animations).
-3. Apply the changes.
+2. Ask specifically what changes to make.
+   - Can modify global Frontmatter (theme, highlighter).
+   - Can apply UnoCSS classes for styling (e.g., 'text-blue-500', 'flex', 'grid').
+   - Can add animations (<v-click>, v-motion).
+   - Can refactor long slides into multiple slides.
+3. Apply the changes precisely.
 """
 
-[[subcommand]]
+[[command.subcommands]]
 name = "export"
 description = "Export presentation to PDF/PNG"
-text = """
+prompt = """
 I want to export my presentation.
-1. Ask if I want PDF or PNG format.
-2. Run the appropriate Slidev export command (e.g., 'npx slidev export --format pdf').
+1. Ask if I want PDF, PNG, or PPTX format.
+2. Ask if I want to include click animations ('--with-clicks').
+3. Run the appropriate Slidev export command (e.g., 'npx slidev export --format pdf --with-clicks').
 """
 
-[[subcommand]]
+[[command.subcommands]]
 name = "run"
 description = "Start Slidev development server"
-text = """
+prompt = """
 Start the Slidev development server.
-1. Run 'npm run dev' or 'npx slidev' in the background.
-2. Inform me of the URL (usually http://localhost:3030).
+1. Run 'npm run dev' or 'npx slidev --open' in the background.
+2. The '--open' flag will automatically open the browser.
+3. Inform me of the URL (usually http://localhost:3030) and the presenter mode URL (http://localhost:3030/presenter).
 """
 
-[[subcommand]]
+[[command.subcommands]]
 name = "help"
 description = "Show help for the Slidev extension"
-text = "Please display the help information for this Slidev extension, listing all available subcommands (init, generate, add, edit, export, run) and their usage."
+prompt = "Please display the help information for this Slidev extension, listing all available subcommands (init, generate, add, edit, export, run) and their usage."

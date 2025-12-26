@@ -4,12 +4,12 @@ A Gemini CLI extension to help you create and edit [Slidev](https://sli.dev/) pr
 
 ## Features
 
-- ⚡ **Init**: Quickly scaffold a new Slidev project.
-- 📝 **Generate**: Create full slide decks from text descriptions.
-- ➕ **Add**: Append new slides with specific layouts.
-- 🎨 **Edit**: Modify existing slides, layouts, and styles.
-- 📤 **Export**: Export your presentation to PDF or PNG.
-- ▶️ **Run**: Start the development server.
+- ⚡ **Init**: Quickly scaffold a new Slidev project with theme selection.
+- 📝 **Generate**: Create full slide decks with advanced layouts, animations (`<v-click>`), and speaker notes.
+- ➕ **Add**: Append new slides using built-in layouts (`two-cols`, `image-right`, `quote`, etc.).
+- 🎨 **Edit**: Modify slides with UnoCSS styling, change themes, or refine animations.
+- 📤 **Export**: Export your presentation to PDF/PNG, with support for click steps.
+- ▶️ **Run**: Start the development server with auto-open and presenter mode info.
 
 ## Usage
 
